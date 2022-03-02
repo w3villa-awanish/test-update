@@ -1,0 +1,27 @@
+{
+  "name": "test-update",
+  "version": "1.0.0",
+  "description": "Test Update",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "electron .",
+    "build": "electron-builder build --win --publish never",
+    "package-win": "electron-packager . electron-tutorial-app --overwrite --asar=true --platform=win32 --arch=x64 --prune=true --out=release-builds --version-string.CompanyName=CE --version-string.FileDescription=CE --version-string.ProductName=\"CryptoApp\"",
+    "deploy": "electron-builder build --win --publish always"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "electron": "^14.2.4",
+    "electron-builder": "^22.14.5"
+  },
+  "dependencies": {
+    "electron-packager": "^15.4.0",
+    "electron-updater": "^4.6.1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/w3villa-awanish/test-update.git"
+  }
+}
